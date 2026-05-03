@@ -16,12 +16,15 @@ public class Trash : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-        if (other.CompareTag("Obstacle"))
+        if (other.CompareTag("Obstacle") || other.CompareTag("Clouds"))
         {
             Destroy(other.gameObject);
+            if(other.CompareTag("Obstacle")) {
             score.score += 1;
             HighScore.TRY_SET_HIGH_SCORE(score.score);
-            Debug.Log("Obstacle cleaned up!");
+            // Debug.Log("cleaned");
+            }
+            // Debug.Log("clouds");
         }
     }
 

@@ -6,12 +6,13 @@ using UnityEngine;
 public class Obstacle_1 : MonoBehaviour
 {
     private Rigidbody rig;
-    public float speed = 10f;
+    //public float speed = 10f;
     Vector3 pos;
-
     void Start()
     {
+
         rig = GetComponent<Rigidbody>();
+
     }
 
     void Update()
@@ -21,6 +22,7 @@ public class Obstacle_1 : MonoBehaviour
 
     public void Move()
     {
+        float speed = Obstacles.instance.obstacleSpeed;
         transform.Translate(Vector3.left * speed * Time.deltaTime);
     }
 

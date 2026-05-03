@@ -43,12 +43,12 @@ public class HighScore : MonoBehaviour
 
     void OnDrawGizmos()
     {
-        if(resetHighScoreNow)
-                {
-                    resetHighScoreNow = false;
-                    PlayerPrefs.SetInt("HighScore",25);
-                    Debug.LogWarning("PlayerPrefs HighScore reset to 25");
-                }   
+        if (resetHighScoreNow)
+            {
+                resetHighScoreNow = false;
+                SCORE = 25; 
+                Debug.LogWarning("HighScore reset to 25 and UI updated.");
+            } 
     }
 
 }

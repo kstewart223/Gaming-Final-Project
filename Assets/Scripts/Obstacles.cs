@@ -28,7 +28,6 @@ public class Obstacles : MonoBehaviour
 
     void Awake() 
     {
-        // Link this specific object to the bridge
         if (instance == null) instance = this;
     }
     
